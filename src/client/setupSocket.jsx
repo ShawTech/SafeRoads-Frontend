@@ -1,6 +1,5 @@
-import { keys } from 'socket-keys.jsx';
-import { mapState } from './MapState.jsx';
-function setupSocket(socket) {
+import { keys } from './socket-keys.jsx';
+function setupSocket(socket, mapState) {
   socket.on(keys.retrievedCrashData, (crashDataList) => {
     mapState.crashDataList = crashDataList;
   });

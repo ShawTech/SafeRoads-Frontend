@@ -1,27 +1,26 @@
 import React from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import { observer } from 'mobx';
-import { mapState } from './State';
-const position = [51.505, -0.09];
-// NOTE: You'll want to hide this from source control if you aren't just using a trial key.
-const platform = new H.service.Platform({
-  app_id: '8eQACGYOury0Xo6Vf8mV',
-  app_code: 'dNwFCAaXAzLVDTzNoPqWdw',
-  useCIT: true,
-  useHTTPS: true
-});
+import { observer } from 'mobx-react';
+import { mapState } from '../state/appState';
+import HEREMap, { Marker } from 'react-here-maps';
 
+// NOTE: You'll want to hide this from source control if you aren't just using a trial key.
+
+const center = { lat: 0, lng: 0 };
 @observer
 class HeatMap extends React.Component {
-  componentDidMount() {
-    this.map = new H.Map(document.getElementById('map'), defaultLayers.normal.map);
-    this.defaultLayers = platform.createDefaultLayers();
-    this.behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-    this.ui = H.ui.UI.createDefault(map, defaultLayers);
-  }
   render() {
     return (
-      <div id="map"></div>
+      
+            <HEREMap 
+                appId="8eQACGYOury0Xo6Vf8mV"
+                appCode="dNwFCAaXAzLVDTzNoPqWdw"
+                center={center}
+                zoom={14}
+            >
+                <Marker {...center}>
+                    <div className="circle-marker"></div>
+                </Marker>
+            </HEREMap>
     );
   }
   resetLocation() {

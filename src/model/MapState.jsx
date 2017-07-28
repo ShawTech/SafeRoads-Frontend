@@ -1,8 +1,7 @@
-import { MapState } from './MapState';
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 class MapState {
+  @observable crashDataList = [];
   constructor(crashDataList) {
-    @observable
     this.crashDataList = crashDataList;
   }
   
