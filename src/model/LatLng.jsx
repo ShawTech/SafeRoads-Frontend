@@ -1,3 +1,6 @@
+/**
+ * A coordinate. Go google LatLng.
+ */
 class LatLng {
   constructor(lat, lng) {
     this.lat = lat;
