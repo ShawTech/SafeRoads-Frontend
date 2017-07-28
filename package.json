@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "leaflet": "^1.1.0",
-    "leaflet.heat": "^0.2.0",
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-leaflet": "^1.4.1",
     "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
