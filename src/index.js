@@ -11,7 +11,7 @@ import SocketIo from 'socket.io-client';
 import { setupSocket } from './client/setupSocket';
 
 // Sets up our SocketIO end points
-setupSocket(SocketIo.connect('http://127.0.0.1:8080'), mapState);
+setupSocket(SocketIo.connect('http://10.77.0.109:8080'), mapState);
 // Renders our components into DOM
 ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
