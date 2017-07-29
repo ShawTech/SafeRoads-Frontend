@@ -11,15 +11,14 @@ class HeatMap extends React.Component {
   constructor() {
     super()
     this.tileLayer = tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    })  ;   
-    console.log("Rendering heatlayer");
+        attribution: '&copy; <a href="http://www.saferoads.tech/">SafeRoads (ShawTech)</a>'
+    });
     this.heatLayer = L.heatLayer(
       [],
       {
         blur: 25,
         minOpacity: 0,
-        gradient:   {0.2: "#55BBFA", 0.4: "#FABB55", 0.6: "#FA9955",0.75: "#FF3333", 1: "#FF0000"}
+        gradient: {0.2: "#55BBFA", 0.4: "#FABB55", 0.6: "#FA9955",0.75: "#FF3333", 1: "#FF0000"}
       }
     );
   }
@@ -37,8 +36,8 @@ class HeatMap extends React.Component {
       )
     );
       return (
-      <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }}></div>
-    );
+        <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }}></div>
+      );
   }
 }
 export {HeatMap};

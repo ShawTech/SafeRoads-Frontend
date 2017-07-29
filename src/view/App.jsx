@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import { HeatMap } from './HeatMap'; 
-import { HeatMap } from './LeafletHeatMap';
+import { HeatMap } from './HeatMap';
+import { AppBar } from './AppBar';
 import './App.css';
 const App = ({}) => (
-  <div className="App">
-    <div className="header">
-      <div className="container">
-        <ul>
-          <li><b style={{textTransform: "uppercase"}}>SafeRoads.Tech Australia - Predictive Road Accidents</b></li>
-        </ul>
-      </div>
+  <div className="page">
+    <div className="main-app-bar">
+      <AppBar title="SafeRoads.Tech Australia - Predictive Road Accidents"/>
     </div>
-    <div className="map-section">
+    <main className="map-section">
       <HeatMap/>
-    </div>
+    </main>
   </div>
 );
 export default App;
