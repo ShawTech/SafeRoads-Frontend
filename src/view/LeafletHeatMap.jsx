@@ -17,11 +17,9 @@ class HeatMap extends React.Component {
     this.heatLayer = L.heatLayer(
       [],
       {
-        "radius": 20,
-        "maxOpacity": .8, 
-        // scales the radius based on map zoom
-        "scaleRadius": true,
-        "useLocalExtrema": true
+        blur: 25,
+        minOpacity: 0,
+        gradient:   {0.2: "#55BBFA", 0.4: "#FABB55", 0.6: "#FA9955",0.75: "#FF3333", 1: "#FF0000"}
       }
     );
   }
