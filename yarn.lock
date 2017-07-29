@@ -1026,7 +1026,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.4.1, bluebird@^3.4.7:
+bluebird@^3.4.7:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
@@ -1549,7 +1549,7 @@ core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
-core-js@^2.4.0, core-js@^2.4.1:
+core-js@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.4.1.tgz#4de911e667b0eae9124e34254b53aea6fc618d3e"
 
@@ -5056,14 +5056,6 @@ react-error-overlay@^1.0.9:
     react-dev-utils "^3.0.2"
     settle-promise "1.0.0"
     source-map "0.5.6"
-
-react-here-maps@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/react-here-maps/-/react-here-maps-0.4.0.tgz#13797287fb4cb10ada1ca61ba06ce518baa46d13"
-  dependencies:
-    bluebird "^3.4.1"
-    core-js "^2.4.1"
-    lodash "^4.15.0"
 
 react@^15.6.1:
   version "15.6.1"
