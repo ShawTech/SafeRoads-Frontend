@@ -1,8 +1,9 @@
-import React from 'react';
-import { observer } from 'mobx-react';
-import { mapState } from '../state/appState';
 import './HeatMap.css';
+
 import Data from "../temp/output.json"
+import React from 'react';
+import { mapState } from '../state/appState';
+import { observer } from 'mobx-react';
 
 const initialLocation = { lat: -37.81425, lng: 144.9632  };
 
@@ -135,10 +136,8 @@ class HeatMap extends React.Component {
     for(var i=0; i < Data.length; i++){
       var item = Data[i]
       var coords = {lat: Number((item.X).toFixed(5)), lng:  Number((item.Y).toFixed(5))}
-      console.log(item)
       addMarkerToGroup(group, coords , "<div>Test</div>");
     }
-    console.log(group)
   }
 
 
