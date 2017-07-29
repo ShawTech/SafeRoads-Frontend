@@ -149,7 +149,7 @@ class HeatMap extends React.Component {
   render() {
     return (
       // This is a where we mount the HERE maps non-React component
-      <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }} style={{width: "100%", minHeight: "100vh", height: "100vh"}}></div>
+      <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }} style={{minWidth: "100vw", width: "100vw", minHeight: "100vh", height: "100vh"}}></div>
     );
   }
   resetLocation() {
