@@ -82,9 +82,9 @@ class HeatMap extends React.Component {
     // Create heat map provider
     var heatmapProvider = new H.data.heatmap.Provider({
       colors: new H.data.heatmap.Colors({
-        0: 'blue',
-        0.5: 'yellow',
-        1: 'red'
+        '0.00': '#0396FF', // blue
+        '0.2': '#F8D800', // yellow
+        '0.6': '#EA5455'  // red
       }, true),
       // Paint assumed values in regions where no data is available
       assumeValues: true
@@ -92,7 +92,8 @@ class HeatMap extends React.Component {
 
     // Add the data
     heatmapProvider.addData([
-      {lat: -37.81425, lng: 144.9632, value: 0},
+      {lat: -37.8098, lng: 144.9652, value: 1},
+      {lat: -37.8107, lng: 144.9657, value:  500}
       // {lat: -37.81425 , lng: 154.9632 , value: 1},
       // {lat: -47.81425 , lng: 144.9632 , value: 1},
       // {lat: -27.81425 , lng: 154.9632 , value: 1}
@@ -100,8 +101,7 @@ class HeatMap extends React.Component {
 
     // Create a semi-transparent heat map layer
     var heatmapLayer = new H.map.layer.TileLayer(heatmapProvider, {
-      opacity: 0.33
-
+      opacity: 0.6
     });
 
 
