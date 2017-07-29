@@ -4,7 +4,7 @@ import { mapState } from '../state/appState';
 import './HeatMap.css';
 import Data from "../temp/output.json"
 
-const initialLocation = { lat: -37.81425, lng: 144.9632  };
+const initialLocation = { lat: -37.81425, lng: 144.9632 };
 
 function useMetric(map, defaultLayers){
   // Create the default UI components
@@ -78,11 +78,10 @@ class HeatMap extends React.Component {
       }
     );
 
-
     // Create heat map provider
     var heatmapProvider = new H.data.heatmap.Provider({
       colors: new H.data.heatmap.Colors({
-        '0.00': '#0396FF', // blue
+        '0.00': 'rgba(3, 150, 255, 0.33)', // blue
         '0.2': '#F8D800', // yellow
         '0.6': '#EA5455'  // red
       }, true),
@@ -115,7 +114,7 @@ class HeatMap extends React.Component {
     // This lets us use the default behaviour of HERE maps like moving around with a cursor.
     this.behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map));
 
-    this.map.setBaseLayer(this.maptypes.normal.traffic)
+    this.map.setBaseLayer(this.maptypes.terrain.base)
     this.map.addLayer(this.maptypes.incidents)
 
     // var parisMarker = new H.map.Marker(initialLocation);
