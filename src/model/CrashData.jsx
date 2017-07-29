@@ -6,7 +6,7 @@ import { LatLng } from './LatLng';
 class CrashData {
   constructor(latlng, probability) {
     // That latlng that this piece of data relates to
-    this.latlng= latlng;
+    this.latlng = latlng;
     // The probability that a crash will occur at this particular lat lng
     this.probability = probability;
   }

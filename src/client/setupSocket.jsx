@@ -1,12 +1,21 @@
-import { keys } from './socket-keys.jsx';
+function get_data(mapState) {
+  fetch('http://localhost:8080/crash/probability', {
+    method: 'get',
+  }).then((response) => {
+    return response.json();
+  }).then((jsonData) => {
+    console.log(jsonData);  
+    mapState.replaceCrashData(jsonData);
+  });
+}
 /**
  * Sets up socket endpoint and specifies what to do when they are triggered.
  */
-function setupSocket(socket, mapState) {
-  socket.on(keys.retrievedCrashData, (crashDataList) => {
-    // Since we're using MobX this will automatically trigger a rerender :D
-    mapState.crashDataList = crashDataList;
-  });
+function setupPolling(mapState) {
+  get_data(mapState);
+  setInterval(() => {
+    get_data(mapState);
+  }, 2000)
 }
-export { setupSocket }
-export default setupSocket;
+export { setupPolling }
+export default setupPolling;
