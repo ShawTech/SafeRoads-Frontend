@@ -5,7 +5,6 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 import App from './view/App';
-
 import { mapState } from './state/appState';
 import SocketIo from 'socket.io-client';
 import { setupPolling } from './client/setupSocket';

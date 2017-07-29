@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HeatMap } from './HeatMap'; 
+//import { HeatMap } from './HeatMap'; 
+import { HeatMap } from './LeafletHeatMap';
 import './App.css';
 const App = ({}) => (
   <div className="App">

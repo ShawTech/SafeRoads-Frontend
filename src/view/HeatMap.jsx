@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import { mapState } from '../state/appState';
 import './HeatMap.css';
 import Data from "../temp/output.json"
-
 const initialLocation = { lat: -37.81425, lng: 144.9632 };
 
 function useMetric(map, defaultLayers){
@@ -123,7 +122,7 @@ class HeatMap extends React.Component {
 
 
   render() {
-    return (
+    return (  
       // This is a where we mount the HERE maps non-React component
       <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }} style={{width: "100%", minHeight: "100vh", height: "100vh"}}></div>
     );
