@@ -83,7 +83,8 @@ class HeatMap extends React.Component {
       colors: new H.data.heatmap.Colors({
         '0.00': 'rgba(3, 150, 255, 0.33)', // blue
         '0.2': '#F8D800', // yellow
-        '0.6': '#EA5455'  // red
+        '0.6': '#EA5455',  // red
+        '0.8': '#B74242'
       }, true),
       // Paint assumed values in regions where no data is available
       assumeValues: true
@@ -92,8 +93,11 @@ class HeatMap extends React.Component {
     // Add the data
     heatmapProvider.addData([
       {lat: -37.8098, lng: 144.9652, value: 1},
-      {lat: -37.8107, lng: 144.9657, value:  500}
-      // {lat: -37.81425 , lng: 154.9632 , value: 1},
+      {lat: -37.8107, lng: 144.9657, value:  100},
+      {lat: -37.8117, lng: 144.9657, value:  100},
+      {lat: -37.8120, lng: 144.9657, value:  100},
+      {lat: -37.8117, lng: 144.9600, value:  100},
+      {lat: -37.81425 , lng: 154.9632 , value: 1},
       // {lat: -47.81425 , lng: 144.9632 , value: 1},
       // {lat: -27.81425 , lng: 154.9632 , value: 1}
     ]);
@@ -115,6 +119,7 @@ class HeatMap extends React.Component {
     this.behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map));
 
     this.map.setBaseLayer(this.maptypes.terrain.base)
+    this.map.addLayer(this.maptypes.normal.traffic)
     this.map.addLayer(this.maptypes.incidents)
 
     // var parisMarker = new H.map.Marker(initialLocation);
@@ -144,7 +149,7 @@ class HeatMap extends React.Component {
   render() {
     return (
       // This is a where we mount the HERE maps non-React component
-      <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }} style={{width: "100%"}}></div>
+      <div className="map-container" ref={(mapContainer) => { this.mapContainer = mapContainer; }} style={{width: "100%", minHeight: "100vh", height: "100vh"}}></div>
     );
   }
   resetLocation() {
