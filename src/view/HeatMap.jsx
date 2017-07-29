@@ -52,7 +52,7 @@ function addMarkerToGroup(group, coordinate, html) {
 
 /**
  * This is a wrapper around HERE maps. You can find the docs at: https://developer.here.com/api-explorer.
- * Note that we're getting the javascript variables from index.html since HERE maps doesn't have a 
+ * Note that we're getting the javascript variables from index.html since HERE maps doesn't have a
  * npm package.
  */
 @observer
@@ -69,7 +69,7 @@ class HeatMap extends React.Component {
 
     // Create a map that mounts onto our mapContainer <div> tag
     this.map = new H.Map(
-      this.mapContainer, 
+      this.mapContainer,
       this.maptypes.normal.map,
       {
         zoom: 15,
@@ -77,6 +77,33 @@ class HeatMap extends React.Component {
         hidpi: true
       }
     );
+
+
+    // Create heat map provider
+    var heatmapProvider = new H.data.heatmap.Provider({
+      colors: new H.data.heatmap.Colors({
+        0: 'blue',
+        0.5: 'yellow',
+        1: 'red'
+      }, true),
+      // Paint assumed values in regions where no data is available
+      assumeValues: true
+    });
+
+    // Add the data
+    heatmapProvider.addData([
+      {lat: -37.81425, lng: 144.9632, value: 0},
+      // {lat: -37.81425 , lng: 154.9632 , value: 1},
+      // {lat: -47.81425 , lng: 144.9632 , value: 1},
+      // {lat: -27.81425 , lng: 154.9632 , value: 1}
+    ]);
+
+    // Create a semi-transparent heat map layer
+    var heatmapLayer = new H.map.layer.TileLayer(heatmapProvider, {
+      opacity: 0.33
+
+    });
+
 
     var group = new H.map.Group();
 
@@ -87,20 +114,22 @@ class HeatMap extends React.Component {
     this.map.layers = []
     // This lets us use the default behaviour of HERE maps like moving around with a cursor.
     this.behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map));
-    
+
     this.map.setBaseLayer(this.maptypes.normal.traffic)
     this.map.addLayer(this.maptypes.incidents)
-    
+
     // var parisMarker = new H.map.Marker(initialLocation);
     // this.map.addObject(parisMarker);
 
-    
+
     addMarkerToGroup(group, initialLocation, '<div>Melbourne</div>')
     addMarkerToGroup(group, {lat: -37.8356, lng: 145.0773}, '<div>Melbourne</div>')
     useMetric(this.map, this.maptypes)
     setUpClickListener(this.map)
 
     addCircleToMap(this.map)
+    // Add the layer to the map
+    this.map.addLayer(heatmapLayer);
 
 
     for(var i=0; i < Data.length; i++){
