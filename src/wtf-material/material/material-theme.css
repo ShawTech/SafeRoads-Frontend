@@ -1,0 +1,20 @@
+@import 'constants/text-constants.css';
+@import 'classes/text-classes.css';
+@import 'classes/layout-classes.css';
+@import 'classes/misc-classes.css';
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: var(--txt-weight-regular);
+  color: var(--txt-color-primary-dark);
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+strong {
+  font-weight: var(--txt-weight-medium);
+}
+i {
+  font-family: MaterialIcons;
+}

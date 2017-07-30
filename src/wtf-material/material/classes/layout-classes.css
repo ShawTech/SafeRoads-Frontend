@@ -1,0 +1,50 @@
+@import '../constants/layout-constants.css';
+.pad-sm {
+  padding: var(--layout-padding-sm);
+}
+.pad-sm-h {
+  padding-right: var(--layout-padding-sm);
+  padding-left: var(--layout-padding-sm);
+}
+.pad-sm-v {
+  padding-top: var(--layout-padding-sm);
+  padding-bottom: var(--layout-padding-sm);
+}
+.pad-md {
+  padding: var(--layout-padding-md);
+}
+.pad-md-h {
+  padding-right: var(--layout-padding-md);
+  padding-left: var(--layout-padding-md);
+}
+.pad-md-v {
+  padding-top: var(--layout-padding-md);
+  padding-bottom: var(--layout-padding-md);
+}
+.pad-lg {
+  padding: var(--layout-padding-lg);
+}
+.pad-lg-h {
+  padding-right: var(--layout-padding-lg);
+  padding-left: var(--layout-padding-lg);
+}
+.pad-lg-v {
+  padding-top: var(--layout-padding-lg);
+  padding-bottom: var(--layout-padding-lg);
+}
+.pad-item-list {
+  padding-top: var(--item-list-padding-v);
+  padding-bottom: var(--item-list-padding-v);
+  padding-left: var(--item-list-padding-h);
+  padding-right: var(--item-list-padding-h);
+}
+.button-padding {
+  padding-left: var(--layout-padding-md);
+  padding-right: var(--layout-padding-md);
+  padding-top: var(--layout-padding-md);
+  padding-bottom: var(--layout-padding-md);
+}
+.button-margin {
+  margin-left: var(--layout-padding-md);
+  margin-right: var(--layout-padding-md); 
+}

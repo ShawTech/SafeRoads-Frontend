@@ -1,0 +1,118 @@
+@import '../constants/text-constants.css';
+
+.txt-body-1 {
+  font-weight: var(--txt-weight-body-1);
+  font-size: var(--txt-size-body-1);
+  line-height: var(--txt-line-height-body-1);
+  letter-spacing: var(--txt-letter-spacing-body-1);
+}
+
+.txt-body-2 {
+  font-weight: var(--txt-weight-body-2);
+  font-size: var(--txt-size-body-2);
+  line-height: var(--txt-line-height-body-2);
+  letter-spacing: var(--txt-letter-spacing-body-2);
+}
+
+.txt-title {  
+  font-weight: var(--txt-weight-title);
+  font-size: var(--txt-size-title);
+  line-height: var(--txt-line-height-title);
+  letter-spacing: var(--txt-letter-spacing-title);
+}
+
+.txt-headline {
+  font-weight: var(--txt-weight-headline);
+  font-size: var(--txt-size-headline);
+  line-height: var(--txt-line-height-headline);
+  letter-spacing: var(--txt-letter-spacing-headline);
+}
+
+.txt-subheading-2 {
+  font-weight: var(--txt-weight-subheading-2);
+  font-size: var(--txt-size-subheading-2);
+  line-height: var(--txt-line-height-subheading-2);
+  letter-spacing: var(--txt-letter-spacing-subheading-2);
+}
+
+.txt-subheading-1 {
+  font-weight: var(--txt-weight-subheading-1);
+  font-size: var(--txt-size-subheading-1);
+  line-height: var(--txt-line-height-subheading-1);
+  letter-spacing: var(--txt-letter-spacing-subheading-1);
+}
+
+.txt-display-1 {
+  font-weight: var(--txt-weight-display-1);
+  font-size: var(--txt-size-display-1);
+  line-height: var(--txt-line-height-display-1);
+  letter-spacing: var(--txt-letter-spacing-display-1);
+}
+
+.txt-display-2 {
+  font-weight: var(--txt-weight-display-2);
+  font-size: var(--txt-size-display-2);
+  line-height: var(--txt-line-height-display-2);
+  letter-spacing: var(--txt-letter-spacing-display-2);
+}
+
+.txt-display-3 {
+  font-weight: var(--txt-weight-display-3);
+  font-size: var(--txt-size-display-3);
+  letter-spacing: var(--txt-letter-spacing-display-3);
+}
+
+.txt-display-4 {
+  font-weight: var(--txt-weight-display-4);
+  font-size: var(--txt-size-display-4);
+  letter-spacing: var(--txt-letter-spacing-display-3);
+}
+
+.txt-button-english {
+  font-size: var(--txt-size-button-english);
+  font-weight: var(--txt-weight-button-english);
+  text-transform: var(--txt-transform-button);
+  letter-spacing: var(--txt-letter-spacing-button);
+}
+
+.txt-button-dense {
+  font-size: var(--txt-size-button-dense);
+  font-weight: var(--txt-weight-button-dense);
+  text-transform: var(--txt-transform-button);
+  letter-spacing: var(--txt-letter-spacing-button);  
+}
+
+.txt-button-tall {
+  font-size: var(--txt-size-button-tall);
+  font-weight: var(--txt-weight-button-tall);
+  text-transform: var(--txt-transform-button);
+  letter-spacing: var(--txt-letter-spacing-button);
+}
+
+.txt-app-bar-title {
+  font-size: var(--txt-size-app-bar-title);
+  font-weight: var(--txt-weight-app-bar-title);
+  letter-spacing: var(--txt-letter-spacing-app-bar-title);
+}
+
+.txt-app-bar-title.dark {
+  color: var(--txt-color-app-bar-title-dark);
+}
+
+.txt-app-bar-title.light {
+  color: var(--txt-color-app-bar-title-light);
+}
+
+.txt-app-bar-subtitle {
+  font-size: var(--txt-size-app-bar-subtitle);
+  font-weight: var(--txt-weight-app-bar-subtitle);
+  letter-spacing: var(--txt-letter-spacing-app-bar-subtitle);
+}
+
+.txt-app-bar-subtitle.dark {
+  color: var(--txt-color-app-bar-subtitle-dark);
+}
+
+.txt-app-bar-subtitle.light {
+  color: var(--txt-color-app-bar-subtitle-light);
+}
