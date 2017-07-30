@@ -6,7 +6,7 @@ import './App.css';
 const App = ({}) => (
   <div className="page">
     <div className="main-app-bar">
-      <AppBar title="SafeRoads.Tech Australia - Predictive Road Accidents"/>
+      <AppBar title="SafeRoads.Tech GovHack Victoria"/>
     </div>
     <main className="map-section">
       <HeatMap/>

@@ -14,8 +14,9 @@ function get_data(mapState) {
 function setupPolling(mapState) {
   get_data(mapState);
   setInterval(() => {
+    console.log("Retrieving data")  ;
     get_data(mapState);
-  }, 2000)
+  }, 5000)
 }
 export { setupPolling }
 export default setupPolling;
