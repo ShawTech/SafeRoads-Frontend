@@ -20,10 +20,11 @@ class HeatMap extends React.Component {
     this.heatLayer = L.heatLayer(
       [],
       {
+        max: 1,
         blur: 25,
         minOpacity: 0,
-        gradient: {0.2: "#55BBFA", 0.4: "#FABB55", 0.6: "#FA9955",0.75: "#FF3333", 1: "#FF0000"}
-      }
+        gradient: {0.4: "#FFFFFF", 0.7: "#55BBFA", 0.85: "#FABB55", 0.9: "#FA9955",0.95: "#FF3333", 1: "#FF0000"}
+      } 
     );
     // this.trafficLayer = L.mapbox.styleLayer('mapbox://styles/lorderikir/cj5q2c46z1g8j2rqnt2qh9uje', MapBoxOptions)
   }
@@ -37,7 +38,7 @@ class HeatMap extends React.Component {
     this.heatLayer.setLatLngs(
       mapState.crashDataList.map(
         (crashDataItem) => {
-          return new LatLng(crashDataItem.latlng.lat, crashDataItem.latlng.lng, crashDataItem.probability);
+          return [crashDataItem.latlng.lat, crashDataItem.latlng.lng, crashDataItem.probability]
         }
       )
     );
