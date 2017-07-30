@@ -1,5 +1,5 @@
 function get_data(mapState) {
-  fetch('http://localhost:8080/crash/probability', {
+  fetch('https://backend.saferoads.tech:8080/crash/probability', {
     method: 'get',
   }).then((response) => {
     return response.json();
@@ -16,7 +16,7 @@ function setupPolling(mapState) {
   setInterval(() => {
     console.log("Retrieving data")  ;
     get_data(mapState);
-  }, 5000)
+  }, 10000)
 }
 export { setupPolling }
 export default setupPolling;
