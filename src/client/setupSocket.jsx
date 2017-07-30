@@ -1,5 +1,5 @@
 function get_data(mapState) {
-  fetch('https://backend.saferoads.tech:8080/crash/probability', {
+  fetch('https://backend.saferoads.tech:3141/crash/probability', {
     method: 'get',
   }).then((response) => {
     return response.json();
